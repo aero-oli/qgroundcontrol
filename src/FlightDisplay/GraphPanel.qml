@@ -38,7 +38,7 @@ Rectangle {
         
         if (_activeSystem) {
             _activeSystem.selectedChanged.connect(_handleSelectedMessageChanged);
-            _updateSelectedMessage(_activeSystem.selectedMsg);
+            _updateSelectedMessage(_activeSystem.selectedMsg());
             messageCombo.model = _activeSystem.messages;
         } else {
             _updateSelectedMessage(null);
@@ -48,7 +48,7 @@ Rectangle {
 
     function _handleSelectedMessageChanged() {
         if (_activeSystem) {
-            _updateSelectedMessage(_activeSystem.selectedMsg);
+            _updateSelectedMessage(_activeSystem.selectedMsg());
         }
     }
 
