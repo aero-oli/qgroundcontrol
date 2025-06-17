@@ -43,7 +43,7 @@ public:
     QGCMAVLinkMessage *findMessage(uint32_t id, uint8_t compId);
     int findMessage(const QGCMAVLinkMessage *message);
     void append(QGCMAVLinkMessage *message);
-    QGCMAVLinkMessage *selectedMsg();
+    Q_INVOKABLE QGCMAVLinkMessage *selectedMsg();
 
 signals:
     void compIDsChanged();
